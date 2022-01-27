@@ -1,0 +1,116 @@
+@mixin centerStuff {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin border_outline() {
+  border: none;
+  outline: none;
+}
+@import "./dropdown";
+
+$netflixColor: #e50914;
+$netflixGroundColor: #0d0c0d;
+
+* {
+  font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+p {
+  color: rebeccapurple;
+  font-size: larger;
+}
+
+.topContainer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.651), rgba(0, 0, 0, 0.562)),
+    url("../images/cover.jpg");
+  height: 95vh;
+  width: 100%;
+
+  .navbar {
+    @include centerStuff();
+    justify-content: space-between;
+    padding: 2rem 5rem;
+
+    .logo {
+      width: 12rem;
+      height: 3.5rem;
+    }
+    .buttons {
+      @include centerStuff();
+
+      .dropdown {
+        padding: 0 30px;
+        .list {
+          background-color: $netflixGroundColor;
+          padding: 7px 17px;
+          border-radius: 1.5px;
+          border: none;
+          outline: 1px solid white;
+          color: white;
+          font-size: 0.875rem;
+          .item {
+            background-color: #aaa;
+          }
+        }
+      }
+      .signinButton {
+        background-color: $netflixColor;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        padding: 7px 17px;
+        font-weight: 400;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .topTitle {
+    padding: 80px 0;
+    margin: auto;
+    text-align: center;
+    color: white;
+    width: 50%;
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-weight: 500;
+    }
+    h3 {
+      font-weight: 300;
+    }
+    .searchbar {
+      @include centerStuff();
+      color: white;
+      .inputbox {
+        @include border_outline();
+        width: 70%;
+        padding: 25px 10px;
+      }
+      .emailButton {
+        @include border_outline();
+        @include centerStuff();
+        width: 30%;
+        padding: 16px 0px;
+        background-color: $netflixColor;
+        font-size: 1.8rem;
+        color: white;
+        align-items: center;
+        &::placeholder {
+          color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.adContainer {
+}
+
+.faqContainer {
+}
+
+.detailsContainer {
+}
