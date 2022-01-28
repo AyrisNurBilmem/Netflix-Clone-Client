@@ -1,6 +1,4 @@
-//import "./styles/homeScreen.css";
-//import styles from "./styles/test.module.css";
-import Landing from "./screens/Landing";
+import Landing from "./pages/Landing";
 function App() {
   return (
     <div className="App">

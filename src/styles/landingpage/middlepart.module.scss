@@ -1,0 +1,58 @@
+@import "variable";
+@import "mixins";
+
+.outside {
+  background-color: $seperationColor;
+  padding: 5px 0;
+}
+.generalContainer {
+  @include centerStuff;
+  background-color: #000;
+  color: white;
+  padding: 25px 60px;
+}
+.contentContainer {
+  width: 40%;
+  padding: 0 65px;
+  .title {
+    font-size: 3.5rem;
+  }
+  .subtitle {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
+.videoContainer {
+  width: 48%;
+  height: 100%;
+  flex: 0 1 auto;
+  box-sizing: border-box;
+}
+.animationContainer {
+  position: relative;
+  overflow: hidden;
+}
+.tv {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  z-index: 100;
+  position: relative;
+  z-index: 2;
+}
+.videoDiv {
+  width: 100%;
+  height: 100%;
+  max-width: 73%;
+  max-height: 54%;
+  position: absolute;
+  top: 46%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+
+  .video {
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: baseline;
+  }
+}

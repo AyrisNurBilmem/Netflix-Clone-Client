@@ -1,0 +1,10 @@
+@mixin centerStuff {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin border_outline {
+  border: none;
+  outline: none;
+}
