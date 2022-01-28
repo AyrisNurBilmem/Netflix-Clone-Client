@@ -1,21 +1,10 @@
-import logo from "./logo.svg";
-import "./App.css";
-
+//import "./styles/homeScreen.css";
+//import styles from "./styles/test.module.css";
+import Landing from "./screens/Landing";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello World!</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Landing />
     </div>
   );
 }
