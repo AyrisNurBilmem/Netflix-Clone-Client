@@ -1,5 +1,5 @@
-@import "mixins";
-@import "variable";
+@import "../../styles/variable";
+@import "../../styles//mixins";
 
 * {
   font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -21,7 +21,7 @@
 
       .signinButton {
         background-color: $netflixColor;
-        color: white;
+        color: $textColor;
         border: none;
         border-radius: 3px;
         padding: 7px 17px;
@@ -40,7 +40,7 @@
   padding: 80px 0;
   margin: auto;
   text-align: center;
-  color: white;
+  color: $textColor;
   width: 50%;
 }
 
@@ -70,8 +70,8 @@
     padding: 20px 0 5px 10px;
     border: none;
     font-size: 20px;
-    color: black;
-    background-color: #fff;
+    color: $defaultColor;
+    background-color: $textColor;
     &:focus {
       outline: none;
     }
@@ -124,7 +124,7 @@
   padding: 18px 0px;
   background-color: $netflixColor;
   font-size: 1.8rem;
-  color: white;
+  color: $textColor;
   align-items: center;
   &::placeholder {
     color: transparent;

@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "../styles/landingpage/landing.module.scss";
-import netflix from "../images/logo.png";
-import DropDown from "../components/DropDown";
+import styles from "../../pages/landing/landing.module.scss";
+import netflix from "../../images/logo.png";
+import DropDown from "../dropdown/DropDown";
 import { IconContext } from "react-icons/lib";
 import * as MdIcons from "react-icons/md";
 

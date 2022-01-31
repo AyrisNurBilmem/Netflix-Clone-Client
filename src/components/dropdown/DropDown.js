@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/landingpage/dropdown.module.scss";
+import styles from "../dropdown/dropdown.module.scss";
 
 const DropDown = () => {
   return (
