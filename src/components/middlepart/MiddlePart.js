@@ -28,7 +28,7 @@ const MiddlePart = ({
             <div className={styles.animationContainer}>
               <img
                 className={styles.tv}
-                src={require("../../images/" + img + ".png")}
+                src={require(`../../images/${img}.png`)}
                 alt="tv"
               />
               {img !== "mobile" ? (
@@ -57,7 +57,7 @@ const MiddlePart = ({
                 <video className={styles.video} loop={true} autoPlay muted>
                   {video && (
                     <source
-                      src={require("../../images/" + video + ".mp4")}
+                      src={require(`../../images/${video}.mp4`)}
                       type="video/mp4"
                     ></source>
                   )}

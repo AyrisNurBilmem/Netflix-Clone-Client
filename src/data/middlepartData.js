@@ -12,7 +12,6 @@ export const middlepartData = [
     description:
       "Save your favourites easily and always have something to watch. ",
     img: "mobile",
-    video: "",
     reverse: true,
   },
   {
@@ -28,7 +27,6 @@ export const middlepartData = [
     description:
       "Send kids on adventures with their favorite characters in a space made just for them—free with your membership. ",
     img: "kids",
-    video: "",
     reverse: true,
   },
 ];
