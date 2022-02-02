@@ -8,3 +8,14 @@
   border: none;
   outline: none;
 }
+
+@mixin svgStyle($transform) {
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  transform: $transform;
+
+  height: 1em;
+  width: 1em;
+  fill: $textColor;
+}
