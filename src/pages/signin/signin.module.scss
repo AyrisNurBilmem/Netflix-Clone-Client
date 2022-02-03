@@ -1,0 +1,122 @@
+@import "../../styles/variable";
+.generalDiv {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.651), rgba(0, 0, 0, 0.562)),
+    url("../../images/cover2.jpg");
+  height: 140vh;
+  width: 100%;
+}
+
+.logoDiv {
+  width: 100%;
+  border-bottom: transparent;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.212) 0,
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding: 2rem 5rem;
+  .logo {
+    height: 60px;
+    width: 170px;
+    vertical-align: middle;
+  }
+}
+.signinBody {
+  position: relative;
+  margin: 0 auto;
+  min-height: 660px;
+  background-color: rgba(0, 0, 0, 0.664);
+  max-width: 450px;
+  .signinCard {
+    max-height: 660px;
+    color: #333;
+    padding: 40px 68px 40px;
+    margin-bottom: 90px;
+  }
+}
+.signinTitle {
+  color: $textColor;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+.signinButton {
+  border: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px;
+  margin: 24px 0 12px;
+  width: 100%;
+  max-width: 100%;
+  background-color: $netflixColor;
+  color: $textColor;
+  line-height: 1em;
+}
+.inputContainer {
+  width: 100%;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  .inputbox {
+    width: 93%;
+    height: 50%;
+    color: gray;
+    padding: 20px 0 5px 21px;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    color: #8c8c8c;
+    background-color: #333;
+    &:focus {
+      outline: none;
+      color: $textColor;
+      border-bottom: solid #e87c03;
+      background-color: rgb(66, 65, 65);
+    }
+  }
+  .inputLabel {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    color: gray;
+    pointer-events: none;
+    align-items: center;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      transform: translateX(-100%);
+      transition: all 0.1s ease;
+    }
+  }
+
+  .labelContent {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-bottom: 12px;
+    transition: all 0.1s ease;
+  }
+
+  .inputbox:focus + .inputLabel .labelContent,
+  .inputbox:valid + .inputLabel .labelContent {
+    transform: translateY(-70%);
+    font-size: 12px;
+    left: 0px;
+  }
+  .inputbox:focus + .inputLabel::after,
+  .inputbox:valid + .inputLabel::after {
+    transform: translateX(0%);
+  }
+}
+.errorMessage {
+  color: #e87c03;
+  padding-bottom: 5px;
+}

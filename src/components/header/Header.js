@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "../../pages/landing/landing.module.scss";
 import netflix from "../../images/logo.png";
 import DropDown from "../dropdown/DropDown";
@@ -12,9 +13,11 @@ const Header = () => {
         <img className={styles.logo} src={netflix} alt="netflix-logo" />
         <div className={styles.buttons}>
           <DropDown />
-          <button className={styles.signinButton} type="submit">
-            Sign In
-          </button>
+          <Link to="signin">
+            <button className={styles.signinButton} type="submit">
+              Sign In
+            </button>
+          </Link>
         </div>
       </div>
       <div className={styles.topTitle}>
