@@ -1,4 +1,6 @@
 @import "../../styles/variable";
+@import "../../styles/mixins";
+
 .generalDiv {
   background-image: linear-gradient(rgba(0, 0, 0, 0.651), rgba(0, 0, 0, 0.562)),
     url("../../images/cover2.jpg");
@@ -119,4 +121,122 @@
 .errorMessage {
   color: #e87c03;
   padding-bottom: 5px;
+}
+.formHelp,
+.rememberMe,
+.needHelp {
+  @include centerStuff;
+  color: #b3b3b3;
+  font-size: 13px;
+}
+.formHelp {
+  justify-content: space-between;
+}
+.rememberMe {
+  justify-content: left;
+}
+
+input[type="checkbox"] {
+  @include centerStuff;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  background-color: #8c8c8c;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+  &:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 10px;
+    color: black;
+    display: none;
+  }
+  &:checked {
+    background-color: $textColor;
+  }
+  &:checked:after {
+    display: block;
+  }
+}
+.needHelp {
+  text-decoration: none;
+}
+.signinOther {
+  padding-top: 45px;
+  -webkit-box-direction: normal;
+  width: 100%;
+}
+.facebookForm {
+  margin-bottom: 0;
+  display: block;
+  margin-top: 0em;
+}
+
+.facebookButton {
+  cursor: pointer;
+  color: #737373;
+  position: relative;
+  margin-top: 16px;
+  min-height: 0;
+  width: auto;
+  border: none;
+  background: 0 0;
+  box-shadow: none;
+  padding: 0;
+  margin-top: 0;
+  display: inline-block;
+  font-size: 13px;
+  .fbImg {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .facebookButtonText {
+    font-size: 13px;
+    font-weight: 500;
+  }
+}
+
+.signupPara {
+  color: #737373;
+}
+
+.signupLink {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 5px;
+}
+
+.termsOfUse {
+  margin-top: 11px;
+  font-size: 13px;
+  color: #8c8c8c;
+  position: relative;
+  text-align: left;
+}
+.termsOfUseButton {
+  background-color: transparent;
+  border: none;
+  color: #0071eb;
+  cursor: pointer;
+  display: inline;
+  font-family: inherit;
+  font-size: inherit;
+  padding-left: 2px;
+}
+.termsOfUseLink {
+  padding: 2px;
+}
+
+.termsOfUseButton:hover,
+.signupLink:hover,
+.needHelp:hover {
+  text-decoration: underline;
 }
