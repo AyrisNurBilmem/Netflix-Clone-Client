@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./footer.module.scss";
 import { footerData } from "../../data/footerData";
 import DropDown from "../dropdown/DropDown";
@@ -20,12 +21,9 @@ const Footer = () => {
               {footerData &&
                 footerData.map((data, id) => (
                   <li key={id} className={styles.footerList}>
-                    <a
-                      href="http://localhost:3000/"
-                      className={styles.footerLink}
-                    >
+                    <Link to="/" className={styles.footerLink}>
                       {data}
-                    </a>
+                    </Link>
                   </li>
                 ))}
             </ul>
