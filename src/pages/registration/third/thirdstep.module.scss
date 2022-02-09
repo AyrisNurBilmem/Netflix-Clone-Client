@@ -1,0 +1,86 @@
+@import "../../../styles/variable";
+.middlecontainer {
+  padding-bottom: 95px;
+  width: 100%;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+.centerContainer {
+  padding: 0 32px 32px;
+  display: block;
+  margin: 0 auto 15px;
+  max-width: 978px;
+  box-sizing: border-box;
+}
+.planCard {
+  max-width: 340px;
+  text-align: center;
+  margin: 0 auto;
+}
+.imgContainer {
+  display: inline-block;
+  padding-top: 0;
+}
+.checkmark {
+  margin: 100px 0 20px;
+  width: 60%;
+  height: 60%;
+}
+.stepCount {
+  text-align: inherit;
+  font-size: 13px;
+  display: block;
+  line-height: 19px;
+}
+.title {
+  font-size: 32px;
+  display: inline-block;
+  font-weight: 700;
+  margin: 0 0 0.4em;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0 10px 10px;
+
+  .listitem {
+    display: inherit;
+    list-style: none;
+    margin-top: 15px;
+    line-height: 1.5;
+    align-items: center;
+  }
+  .listcontent {
+    padding: 10px;
+    font-size: 18px;
+  }
+}
+.buttonCard {
+  padding-top: 30px;
+  max-width: 340px;
+  margin-top: 24px;
+  text-align: center;
+  margin: 0 auto;
+}
+.nextbtn {
+  min-height: 64px;
+  font-weight: 500;
+  font-size: 24px;
+  border-radius: 4px;
+  line-height: 1;
+  padding: 0.75rem 25px;
+  min-width: 110px;
+  width: 100%;
+  color: $textColor;
+  background-color: $netflixColor;
+  letter-spacing: 0.025rem;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.247);
+  cursor: pointer;
+  &:hover {
+    background-color: #f70a16;
+  }
+}

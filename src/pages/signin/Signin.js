@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import useForm from "./useForm";
-import validate from "./validateInfo";
+import useForm from "../../error/useForm";
+import validate from "../../error/validateInfo";
 import { Link } from "react-router-dom";
 import styles from "./signin.module.scss";
 import netflix from "../../images/logo.png";
@@ -59,9 +59,11 @@ const Signin = () => {
                   {errors.password && (
                     <div className={styles.errorMessage}>{errors.password}</div>
                   )}
+
                   <button className={styles.signinButton} type="submit">
                     Sign In
                   </button>
+
                   <div className={styles.formHelp}>
                     <div className={styles.rememberMe}>
                       <input className={styles.checkbox} type="checkbox" />
