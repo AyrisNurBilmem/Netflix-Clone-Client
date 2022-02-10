@@ -30,7 +30,6 @@ const Signin = () => {
                       autoComplete="off"
                       onChange={handleChange}
                       value={values.email}
-                      required
                     />
                     <label className={styles.inputLabel}>
                       <span className={styles.labelContent}>
@@ -50,7 +49,6 @@ const Signin = () => {
                       autoComplete="off"
                       onChange={handleChange}
                       value={values.password}
-                      required
                     />
                     <label className={styles.inputLabel}>
                       <span className={styles.labelContent}>Password</span>

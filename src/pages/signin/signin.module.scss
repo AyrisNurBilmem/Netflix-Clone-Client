@@ -72,6 +72,7 @@
     font-size: 20px;
     color: #8c8c8c;
     background-color: #333;
+    transform: translateX(0%);
     &:focus {
       outline: none;
       color: $textColor;
@@ -108,14 +109,12 @@
     transition: all 0.1s ease;
   }
 
-  .inputbox:focus + .inputLabel .labelContent,
-  .inputbox:valid + .inputLabel .labelContent {
+  .inputbox:focus + .inputLabel .labelContent {
     transform: translateY(-70%);
     font-size: 12px;
     left: 0px;
   }
-  .inputbox:focus + .inputLabel::after,
-  .inputbox:valid + .inputLabel::after {
+  .inputbox:focus + .inputLabel::after {
     transform: translateX(0%);
   }
 }
