@@ -12,6 +12,7 @@ const SecondStep = () => {
 
   function handleInput(event) {
     setInput(event.target.value);
+    console.log(input);
   }
 
   return (
