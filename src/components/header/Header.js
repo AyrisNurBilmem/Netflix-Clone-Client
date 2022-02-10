@@ -13,7 +13,7 @@ const Header = () => {
         <img className={styles.logo} src={netflix} alt="netflix-logo" />
         <div className={styles.buttons}>
           <DropDown />
-          <Link to="signin">
+          <Link to="/signup/registration">
             <button className={styles.signinButton} type="submit">
               Sign In
             </button>

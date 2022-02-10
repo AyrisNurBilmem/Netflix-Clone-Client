@@ -126,6 +126,7 @@
   background-color: $netflixColor;
   font-size: 1.8rem;
   color: $textColor;
+  cursor: pointer;
   align-items: center;
   &::placeholder {
     color: transparent;
