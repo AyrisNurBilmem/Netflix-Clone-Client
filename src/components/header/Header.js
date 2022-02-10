@@ -13,7 +13,7 @@ const Header = () => {
         <img className={styles.logo} src={netflix} alt="netflix-logo" />
         <div className={styles.buttons}>
           <DropDown />
-          <Link to="/signup/registration">
+          <Link to="/signin">
             <button className={styles.signinButton} type="submit">
               Sign In
             </button>
@@ -37,9 +37,12 @@ const Header = () => {
               <span className={styles.labelContent}>Email address</span>
             </label>
           </div>
+
           <IconContext.Provider value={{ color: "white", size: "35px" }}>
             <button className={styles.emailButton} type="submit">
-              Get Started
+              <Link className={styles.emailLink} to="/signup/registration">
+                Get Started
+              </Link>
               <MdIcons.MdOutlineNavigateNext />
             </button>
           </IconContext.Provider>
