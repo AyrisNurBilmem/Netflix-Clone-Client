@@ -14,11 +14,7 @@ const MiddlePart = ({
       <div className={styles.outside}>
         <div
           className={styles.generalContainer}
-          style={
-            reverse
-              ? { "flex-direction": "row-reverse" }
-              : { "flex-direction": "row" }
-          }
+          style={{ flexDirection: reverse ? "row-reverse" : "row" }}
         >
           <div className={styles.contentContainer}>
             <h1 className={styles.title}>{title}</h1>
@@ -31,9 +27,7 @@ const MiddlePart = ({
                 src={require(`../../images/${img}.png`)}
                 alt="tv"
               />
-              {img !== "mobile" ? (
-                ""
-              ) : (
+              {img === "mobile" && (
                 <div className={styles.downloading}>
                   <div className={styles.downloadingImage}>
                     <img
