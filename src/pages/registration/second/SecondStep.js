@@ -94,11 +94,9 @@ const SecondStep = () => {
                 </div>
               </div>
               <div className={styles.buttonCard}>
-                <Link to="/signup">
-                  <button className={styles.nextbtn} type="submit">
-                    Next
-                  </button>
-                </Link>
+                <button className={styles.nextbtn} type="submit">
+                  Next
+                </button>
               </div>
             </form>
           </div>

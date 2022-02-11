@@ -113,14 +113,14 @@ const Signin = () => {
                       you're not a bot.
                     </span>
                     <button
-                      onClick={() => setIsOpen(!isOpen)}
+                      onClick={() => setIsOpen((isOpen) => !isOpen)}
                       className={styles.termsOfUseButton}
                       type="submit"
                     >
                       Learn more.
                     </button>
                   </p>
-                  {isOpen === true && (
+                  {isOpen && (
                     <div className={styles.learnMore}>
                       <span>
                         The information collected by Google reCAPTCHA is subject

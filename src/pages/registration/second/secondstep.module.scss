@@ -88,16 +88,11 @@
     transition: all 0.1s ease;
   }
 
-  .inputbox:focus + .inputLabel .labelContent,
-  .inputbox:valid + .inputLabel .labelContent {
+  .inputbox:focus + .inputLabel .labelContent {
     transform: translateY(-110%);
     font-size: 14px;
     font-weight: bold;
     left: 0px;
-  }
-  .inputbox:focus + .inputLabel::after,
-  .inputbox:valid + .inputLabel::after {
-    transform: translateX(0%);
   }
 }
 .specialOffers {

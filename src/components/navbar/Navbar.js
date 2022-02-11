@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div>
       <div className={styles.navbar}>
-        <Link className={styles.linkTag} to="/">
+        <Link className={styles.linkTag} to="/signin">
           <div className={styles.links}>
             <img className={styles.logo} src={logo} alt="logo" />
             <p className={styles.signin}>Sign In</p>
