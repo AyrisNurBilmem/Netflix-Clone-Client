@@ -1,0 +1,18 @@
+@import "../../styles/variable";
+
+.dropdown {
+  padding: 0 30px;
+
+  .list {
+    background-color: $netflixGroundColor;
+    padding: 7px 17px;
+    border-radius: 1.5px;
+    border: none;
+    outline: 1px solid $textColor;
+    color: $textColor;
+    font-size: 0.875rem;
+    .item {
+      background-color: #aaa;
+    }
+  }
+}

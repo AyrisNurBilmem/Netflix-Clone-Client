@@ -1,0 +1,126 @@
+@import "../../styles/variable";
+@import "../../styles/mixins";
+
+.outside {
+  background-color: $seperationColor;
+  padding: 5px 0;
+}
+.generalContainer {
+  @include centerStuff;
+  background-color: $defaultColor;
+  color: $textColor;
+  padding: 25px 60px;
+}
+.contentContainer {
+  width: 40%;
+  padding: 0 65px;
+  .title {
+    font-size: 3.5rem;
+  }
+  .subtitle {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
+.videoContainer {
+  width: 48%;
+  height: 100%;
+  flex: 0 1 auto;
+  box-sizing: border-box;
+}
+.animationContainer {
+  position: relative;
+  overflow: hidden;
+}
+.tv {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  z-index: 100;
+  position: relative;
+  z-index: 2;
+}
+.videoDiv {
+  width: 100%;
+  height: 100%;
+  max-width: 73%;
+  max-height: 54%;
+  position: absolute;
+  top: 46%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+
+  .video {
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: baseline;
+  }
+}
+
+.videoDiv2 {
+  max-width: 63%;
+  max-height: 47%;
+  position: absolute;
+  top: 33%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  .video {
+    object-fit: contain;
+    width: 110%;
+    height: 100%;
+  }
+}
+
+// Downloading div
+.downloading {
+  padding: 0.5em 0.75em;
+  position: absolute;
+  left: 21%;
+  bottom: 12%;
+  z-index: 3;
+  margin: 0 auto;
+  background: $defaultColor;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  min-width: 15em;
+  padding: 0.25em 0.65em;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 2em 0 $defaultColor;
+  border-radius: 0.75em;
+  &::after {
+    width: 3em;
+    height: 3em;
+    outline: 2px solid $defaultColor;
+    outline-offset: -2px;
+    display: block;
+    background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif)
+      center center no-repeat;
+    background-size: 100%;
+    content: "";
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+.stImage {
+  margin: 0 1em 0 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 57px;
+  height: 80px;
+}
+.downloadingText {
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: 0.3em 0;
+  .text0 {
+    color: $textColor;
+    font-weight: 600;
+    font-size: 1em;
+  }
+  .text1 {
+    color: #0071eb;
+    font-size: 0.9em;
+    font-weight: 400;
+  }
+}
