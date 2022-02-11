@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import useForm from "../../../error/useForm";
 import validate from "../../../error/validateFormSignUp";
 import Footer from "../../../components/footer/Footer";
