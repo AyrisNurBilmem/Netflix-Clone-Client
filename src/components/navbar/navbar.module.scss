@@ -1,0 +1,26 @@
+.navbar {
+  padding: 2rem 5rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+.linkTag {
+  text-decoration: none;
+  .signin {
+    color: #333;
+    font-weight: 700;
+    font-size: 19px;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+
+  .logo {
+    height: 60px;
+    width: 170px;
+    vertical-align: middle;
+  }
+}
