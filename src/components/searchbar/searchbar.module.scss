@@ -9,7 +9,7 @@
   @include centerStuff;
 }
 .searchbar {
-  width: 75%;
+  width: 100%;
   position: relative;
   height: 60px;
   overflow: hidden;
@@ -70,15 +70,25 @@
     transform: translateX(0%);
   }
 }
+.buttonLink {
+  text-decoration: none;
+  width: 50%;
+}
+
 .emailButton {
   @include border_outline();
   @include centerStuff;
-  width: 30%;
+  font-size: 1.8rem;
+  width: 100%;
   padding: 18px 0px;
   background-color: $netflixColor;
-  font-size: 1.8rem;
   color: $textColor;
+  cursor: pointer;
+
   align-items: center;
+  &:hover {
+    background-color: #f70a16;
+  }
   &::placeholder {
     color: transparent;
   }

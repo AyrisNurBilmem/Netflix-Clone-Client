@@ -1,0 +1,51 @@
+@import "../../styles/variable";
+@import "../../styles/mixins";
+.topContainer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.651), rgba(0, 0, 0, 0.562)),
+    url("../../images/cover.jpg");
+  height: 95vh;
+  width: 100%;
+
+  .navbar {
+    @include centerStuff;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+    .signinLink {
+      padding-left: 30px;
+    }
+    .buttons {
+      @include centerStuff();
+      justify-content: space-between;
+
+      .signinButton {
+        background-color: $netflixColor;
+        color: $textColor;
+        border: none;
+        border-radius: 3px;
+        padding: 7px 17px;
+        font-weight: 400;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.logo {
+  height: 60px;
+  width: 170px;
+}
+
+.topTitle {
+  padding: 80px 0;
+  margin: auto;
+  text-align: center;
+  color: $textColor;
+  width: 50%;
+}
+
+.mainTitle {
+  font-size: 4rem;
+}
+.secondaryTitle {
+  font-weight: 500;
+}

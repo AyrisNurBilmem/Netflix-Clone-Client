@@ -4,6 +4,7 @@ import { middlepartData } from "../../data/middlepartData";
 import MiddlePart from "../../components/middlepart/MiddlePart";
 import Faq from "../../components/faq/Faq";
 import Footer from "../../components/footer/Footer";
+import styles from "./landing.module.scss";
 
 const Landing = () => {
   return (
@@ -23,7 +24,9 @@ const Landing = () => {
         ))}
 
       <Faq />
-      <Footer />
+      <div className={styles.footer}>
+        <Footer />
+      </div>
     </>
   );
 };

@@ -8,7 +8,11 @@ import Footer from "../../components/footer/Footer";
 
 const Signin = () => {
   const { handleChange, values, handleSubmit, errors } = useForm(validate);
+  const [input, setInput] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const handleInput = (event) => {
+    setInput(event.target.value);
+  };
   return (
     <>
       <div className={styles.generalDiv}>
@@ -28,11 +32,21 @@ const Signin = () => {
                       className={styles.inputbox}
                       name="email"
                       autoComplete="off"
-                      onChange={handleChange}
-                      value={values.email}
+                      onChange={handleInput}
+                      defaultValue={values.email}
                     />
                     <label className={styles.inputLabel}>
-                      <span className={styles.labelContent}>
+                      <span
+                        className={styles.labelContent}
+                        style={
+                          input !== ""
+                            ? {
+                                transform: " translateY(-60%)",
+                                fontSize: "14px",
+                              }
+                            : { transform: " translateX(0%)", fontSize: "16px" }
+                        }
+                      >
                         Email or phone number
                       </span>
                     </label>
@@ -47,11 +61,23 @@ const Signin = () => {
                       type="password"
                       name="password"
                       autoComplete="off"
-                      onChange={handleChange}
-                      value={values.password}
+                      onChange={handleInput}
+                      defaultValue={values.password}
                     />
                     <label className={styles.inputLabel}>
-                      <span className={styles.labelContent}>Password</span>
+                      <span
+                        className={styles.labelContent}
+                        style={
+                          input !== ""
+                            ? {
+                                transform: " translateY(-60%)",
+                                fontSize: "14px",
+                              }
+                            : { transform: " translateX(0%)", fontSize: "16px" }
+                        }
+                      >
+                        Password
+                      </span>
                     </label>
                   </div>
                   {errors.password && (
@@ -149,7 +175,11 @@ const Signin = () => {
             </div>
           </div>
         </div>
-        <Footer />
+        <div className={styles.footerDiv}>
+          <div className={styles.footer}>
+            <Footer />
+          </div>
+        </div>
       </div>
     </>
   );

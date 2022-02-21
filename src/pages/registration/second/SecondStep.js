@@ -1,108 +1,74 @@
-import React, { useState } from "react";
-import useForm from "../../../error/useForm";
-import validate from "../../../error/validateFormSignUp";
-import Footer from "../../../components/footer/Footer";
+import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../../../components/navbar/Navbar";
 import styles from "./secondstep.module.scss";
+import checkmark from "../../../images/Checkmark.png";
+import Footer from "../../../components/footer/Footer";
+import * as IoIcons from "react-icons/io";
+import { IconContext } from "react-icons/lib";
 
 const SecondStep = () => {
-  const { handleChange, values, handleSubmit, errors } = useForm(validate);
-  const [input, setInput] = useState("");
-
-  function handleInput(event) {
-    setInput(event.target.value);
-    console.log(input);
-  }
-
   return (
-    <div>
+    <>
       <div className={styles.wholepage}>
         <Navbar />
-        <div className={styles.middleContainer}>
+        <div className={styles.middlepart}>
           <div className={styles.centerContainer}>
-            <form className={styles.form} onSubmit={handleSubmit}>
-              <div className={styles.regForm}>
-                <div className={styles.regHeader}>
-                  <div className={styles.header}>
-                    <span className={styles.stepCount}>
-                      STEP <strong>1</strong> OF <strong>3</strong>
-                    </span>
-                    <h1 className={styles.title}>
-                      Create a password to start your membership
-                    </h1>
-                  </div>
-                </div>
-                <div className={styles.regContent}>
-                  <p className={styles.customerView}>
-                    Just a few more steps and you're done!
-                  </p>
-                  <p className={styles.customerView}>We hate paperwork, too.</p>
-
-                  <div className={styles.inputContainer}>
-                    <input
-                      style={
-                        errors.email
-                          ? { borderColor: "#f70a16" }
-                          : { borderColor: "gray" }
-                      }
-                      className={styles.inputbox}
-                      type="email"
-                      autoComplete="off"
-                      onChange={(handleChange, handleInput)}
-                      defaultValue={values.email}
-                    />
-                    <label className={styles.inputLabel}>
-                      <span className={styles.labelContent}>Email</span>
-                    </label>
-                  </div>
-                  {errors.email && (
-                    <div className={styles.errorMessage}>{errors.email}</div>
-                  )}
-
-                  <div className={styles.inputContainer}>
-                    <input
-                      style={
-                        errors.password
-                          ? { borderColor: "#f70a16" }
-                          : { borderColor: "gray" }
-                      }
-                      className={styles.inputbox}
-                      type="password"
-                      autoComplete="off"
-                      onChange={(handleChange, handleInput)}
-                      defaultValue={values.password}
-                    />
-                    <label className={styles.inputLabel}>
-                      <span className={styles.labelContent}>
-                        Add a password
-                      </span>
-                    </label>
-                  </div>
-                  {errors.password && (
-                    <div className={styles.errorMessage}>{errors.password}</div>
-                  )}
-                  <div className={styles.specialOffers}>
-                    <input
-                      className={styles.specialOffersCheckbox}
-                      type="checkbox"
-                    />
-                    <label className={styles.specialOffersLabel}>
-                      Please do not email me Netflix special offers.
-                    </label>
-                  </div>
+            <div className={styles.planCard}>
+              <div className={styles.imgContainer}>
+                <img
+                  className={styles.checkmark}
+                  src={checkmark}
+                  alt="checkmark"
+                />
+              </div>
+              <div className={styles.headerContainer}>
+                <div className={styles.header}>
+                  <span className={styles.stepCount}>
+                    STEP <strong>2</strong> OF <strong>3</strong>
+                  </span>
+                  <h1 className={styles.title}>Choose your plan.</h1>
                 </div>
               </div>
-              <div className={styles.buttonCard}>
+              <div className={styles.content}>
+                <ul className={styles.list}>
+                  <IconContext.Provider value={{ color: "red", size: "25px" }}>
+                    <li className={styles.listitem}>
+                      <IoIcons.IoMdCheckmark />
+                      <span className={styles.listcontent}>
+                        No commitments, cancel anytime.
+                      </span>
+                    </li>
+                    <li className={styles.listitem}>
+                      <IoIcons.IoMdCheckmark />
+                      <span className={styles.listcontent}>
+                        Everything on Netflix for one low price.
+                      </span>
+                    </li>
+                    <li className={styles.listitem}>
+                      <IoIcons.IoMdCheckmark />
+                      <span className={styles.listcontent}>
+                        Unlimited viewing on all your devices.
+                      </span>
+                    </li>
+                  </IconContext.Provider>
+                </ul>
+              </div>
+            </div>
+            <div className={styles.buttonCard}>
+              <Link to="/paymentChoice">
                 <button className={styles.nextbtn} type="submit">
                   Next
                 </button>
-              </div>
-            </form>
+              </Link>
+            </div>
           </div>
         </div>
-        <Footer />
+        <div className={styles.footer}>
+          <Footer />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

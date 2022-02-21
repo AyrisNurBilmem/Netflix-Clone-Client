@@ -4,7 +4,7 @@
 .generalDiv {
   background-image: linear-gradient(rgba(0, 0, 0, 0.651), rgba(0, 0, 0, 0.562)),
     url("../../images/cover2.jpg");
-  height: 140vh;
+  height: 160vh;
   width: 100%;
 }
 
@@ -114,9 +114,9 @@
     font-size: 12px;
     left: 0px;
   }
-  .inputbox:focus + .inputLabel::after {
-    transform: translateX(0%);
-  }
+
+  /* .input-container input:focus ~ label,
+.input-container input:valid ~ label*/
 }
 .errorMessage {
   color: #e87c03;
@@ -136,7 +136,7 @@
   justify-content: left;
 }
 
-input[type="checkbox"] {
+.checkbox[type="checkbox"] {
   @include centerStuff;
   appearance: none;
   -webkit-appearance: none;
@@ -156,6 +156,7 @@ input[type="checkbox"] {
   }
   &:checked {
     background-color: $textColor;
+    border: none;
   }
   &:checked:after {
     display: block;
@@ -239,4 +240,10 @@ input[type="checkbox"] {
 .signupLink:hover,
 .needHelp:hover {
   text-decoration: underline;
+}
+.footerDiv {
+  padding-top: 100px;
+}
+.footer {
+  @include footer(rgba(0, 0, 0, 0.938));
 }

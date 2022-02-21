@@ -19,3 +19,8 @@
   width: 1em;
   fill: $textColor;
 }
+
+@mixin footer($background) {
+  background-color: $background;
+  padding: 50px 45px;
+}

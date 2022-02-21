@@ -1,48 +1,115 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import devices from "../../../images/devices.png";
-import Navbar from "../../../components/navbar/Navbar";
-import styles from "./firstStep.module.scss";
+import useForm from "../../../error/useForm";
+import validate from "../../../error/validateFormSignUp";
 import Footer from "../../../components/footer/Footer";
+import Navbar from "../../../components/navbar/Navbar";
+import styles from "./firststep.module.scss";
+import { UserContext } from "../../../context/UserContext";
 
 const FirstStep = () => {
+  const { handleChange, values, handleSubmit, errors } = useForm(validate);
+  const [input, setInput] = useState("");
+  //  const { email, setEmail } = useContext(userContext);
+
+  function handleInput(event) {
+    setInput(event.target.value);
+    console.log(input);
+  }
+
   return (
-    <>
+    <div>
       <div className={styles.wholepage}>
         <Navbar />
-        <div className={styles.middlecontainer}>
+        <div className={styles.middleContainer}>
           <div className={styles.centerContainer}>
-            <div className={styles.regCard}>
-              <div className={styles.imgContainer}>
-                <img className={styles.deviceImg} src={devices} alt="devices" />
-              </div>
-              <div className={styles.headerContainer}>
-                <div className={styles.header}>
-                  <span className={styles.stepCount}>
-                    STEP <strong>1</strong> OF <strong>3</strong>
-                  </span>
-                  <h1 className={styles.title}>
-                    Finish setting up your account
-                  </h1>
+            <form className={styles.form} onSubmit={handleSubmit}>
+              <div className={styles.regForm}>
+                <div className={styles.regHeader}>
+                  <div className={styles.header}>
+                    <span className={styles.stepCount}>
+                      STEP <strong>1</strong> OF <strong>3</strong>
+                    </span>
+                    <h1 className={styles.title}>
+                      Create a password to start your membership
+                    </h1>
+                  </div>
+                </div>
+                <div className={styles.regContent}>
+                  <p className={styles.customerView}>
+                    Just a few more steps and you're done!
+                  </p>
+                  <p className={styles.customerView}>We hate paperwork, too.</p>
+
+                  <div className={styles.inputContainer}>
+                    <input
+                      style={
+                        errors.email
+                          ? { borderColor: "#f70a16" }
+                          : { borderColor: "gray" }
+                      }
+                      className={styles.inputbox}
+                      type="email"
+                      autoComplete="off"
+                      onChange={(handleChange, handleInput)}
+                      defaultValue={values.email}
+                    />
+                    <label className={styles.inputLabel}>
+                      <span className={styles.labelContent}>Email</span>
+                    </label>
+                  </div>
+                  {errors.email && (
+                    <div className={styles.errorMessage}>{errors.email}</div>
+                  )}
+
+                  <div className={styles.inputContainer}>
+                    <input
+                      style={
+                        errors.password
+                          ? { borderColor: "#f70a16" }
+                          : { borderColor: "gray" }
+                      }
+                      className={styles.inputbox}
+                      type="password"
+                      autoComplete="off"
+                      onChange={(handleChange, handleInput)}
+                      defaultValue={values.password}
+                    />
+                    <label className={styles.inputLabel}>
+                      <span className={styles.labelContent}>
+                        Add a password
+                      </span>
+                    </label>
+                  </div>
+                  {errors.password && (
+                    <div className={styles.errorMessage}>{errors.password}</div>
+                  )}
+                  <div className={styles.specialOffers}>
+                    <input
+                      className={styles.specialOffersCheckbox}
+                      type="checkbox"
+                    />
+                    <label className={styles.specialOffersLabel}>
+                      Please do not email me Netflix special offers.
+                    </label>
+                  </div>
                 </div>
               </div>
-              <div className={styles.content}>
-                Netflix is personalized for you. Create a password to watch on
-                any device at any time.
-              </div>
-            </div>
-            <div className={styles.buttonCard}>
-              <Link to="/signup/regform">
-                <button className={styles.nextbtn} type="submit">
-                  Next
-                </button>
+              <Link to="/signup">
+                <div className={styles.buttonCard}>
+                  <button className={styles.nextbtn} type="submit">
+                    Next
+                  </button>
+                </div>
               </Link>
-            </div>
+            </form>
           </div>
         </div>
-        <Footer />
+        <div className={styles.footer}>
+          <Footer />
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
