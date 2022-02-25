@@ -1,0 +1,46 @@
+.buttons {
+  min-height: 60px;
+  height: auto;
+  line-height: 60px;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 3px;
+  margin: 10px 0px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+.link {
+  text-decoration: none;
+  color: #333;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.contentDiv {
+  float: none;
+  max-width: none;
+  .content {
+    min-height: 20px;
+    line-height: 20px;
+  }
+}
+.logoDiv {
+  margin: 0 15px;
+  min-height: 20px;
+  line-height: 20px;
+  .logos {
+    display: inline-block;
+    margin: 4px 6px 0 0;
+    width: auto;
+  }
+}
+.select {
+  font-size: 40px;
+  font-weight: 200;
+  color: #ccc;
+  margin-left: auto;
+  margin-right: 5px;
+}

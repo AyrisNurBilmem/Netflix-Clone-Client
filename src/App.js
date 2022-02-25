@@ -6,6 +6,9 @@ import IntroductionStep from "./pages/registration/introduction/IntroductionStep
 import FirstStep from "./pages/registration/first/FirstStep";
 import SecondStep from "./pages/registration/second/SecondStep";
 import ThirdStep from "./pages/registration/third/ThirdStep";
+import Payment from "./pages/registration/payment/Payment";
+import CreditCard from "./pages/registration/payment/creditcard/CreditCard";
+import GiftCard from "./pages/registration/payment/giftcard/GiftCard";
 import { UserContext } from "./context/UserContext";
 
 function App() {
@@ -25,6 +28,13 @@ function App() {
           <Route exact path="/signup/regform" element={<FirstStep />} />
           <Route exact path="/signup" element={<SecondStep />} />
           <Route exact path="/paymentChoice" element={<ThirdStep />} />
+          <Route exact path="/paymentChoice/payment" element={<Payment />} />
+          <Route
+            exact
+            path="/paymentChoice/creditcard"
+            element={<CreditCard />}
+          />
+          <Route exact path="/paymentChoice/giftcard" element={<GiftCard />} />
         </Routes>
       </UserContext.Provider>
     </div>

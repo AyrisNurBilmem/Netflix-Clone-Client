@@ -76,7 +76,7 @@ const ThirdStep = () => {
             </div>
 
             <div className={styles.buttonCard}>
-              <Link to="/paymentChoice">
+              <Link to="/paymentChoice/payment">
                 <button className={styles.nextbtn} type="submit">
                   Next
                 </button>
