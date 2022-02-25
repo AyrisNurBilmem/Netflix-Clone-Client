@@ -7,7 +7,7 @@ import netflix from "../../images/logo.png";
 import Footer from "../../components/footer/Footer";
 
 const Signin = () => {
-  const { handleChange, values, handleSubmit, errors } = useForm(validate);
+  const { values, handleSubmit, errors } = useForm(validate);
   const [input, setInput] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const handleInput = (event) => {
