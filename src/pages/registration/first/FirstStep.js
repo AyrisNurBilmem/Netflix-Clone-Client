@@ -4,7 +4,7 @@ import useForm from "../../../error/useForm";
 import validate from "../../../error/validateFormSignUp";
 import Footer from "../../../components/footer/Footer";
 import Navbar from "../../../components/navbar/Navbar";
-import styles from "./firststep.module.scss";
+import styles from "./first.module.scss";
 
 const FirstStep = () => {
   const { handleChange, values, handleSubmit, errors } = useForm(validate);
