@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import StepButton from "../../../components/stepbutton/StepButton";
 import Navbar from "../../../components/navbar/Navbar";
 import Footer from "../../../components/footer/Footer";
 import Table from "../../../components/table/Table";
@@ -74,14 +74,7 @@ const ThirdStep = () => {
                 </p>
               </div>
             </div>
-
-            <div className={styles.buttonCard}>
-              <Link to="/paymentChoice/payment">
-                <button className={styles.nextbtn} type="submit">
-                  Next
-                </button>
-              </Link>
-            </div>
+            <StepButton link={"/paymentChoice/payment"} content={" Next"} />
           </div>
         </div>
         <div className={styles.footer}>
