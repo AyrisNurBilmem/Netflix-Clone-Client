@@ -17,7 +17,6 @@ export const inputFieldData = [
   },
   {
     label: "Security Code (CVV)",
-    icon: "+",
     error: "Please enter a security code (CVV)",
   },
 ];

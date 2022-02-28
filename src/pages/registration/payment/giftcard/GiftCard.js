@@ -11,6 +11,61 @@ const GiftCard = () => {
   const handleClick = () => {
     setIsClicked(!isClicked);
   };
+  const inputField = () => {
+    return (
+      <div className={styles.codeContainer}>
+        <InputBox label={"Gift Card or Code"} />
+        <div className={styles.plan}>
+          <div className={styles.planType}>
+            <div className={styles.price}>
+              <span className={styles.priceSpan}>26.99 TL/month</span>
+            </div>
+            <div className={styles.planName}>Basic Plan</div>
+          </div>
+          <Link to="/paymentChoice">
+            <button className={styles.changeBtn}>Change</button>
+          </Link>
+        </div>
+      </div>
+    );
+  };
+  const privacyText = () => {
+    return (
+      <div className={styles.termsContainer}>
+        <div className={styles.terms}>
+          <p className={styles.content}>
+            <span className={styles.contentSpan}>
+              This page is protected by Google reCAPTCHA to ensure you're not a
+              bot.{" "}
+            </span>
+            <button
+              className={styles.learnMoreBtn}
+              onClick={handleClick}
+              style={isClicked ? { display: "none" } : { display: "block" }}
+            >
+              Learn More
+            </button>
+          </p>
+          {isClicked && (
+            <div className={styles.learnMore}>
+              <span className={styles.learnMoreContent}>
+                The information collected by Google reCAPTCHA is subject to the
+                Google{" "}
+                <a href="https://policies.google.com/privacy">Privacy Policy</a>{" "}
+                and{" "}
+                <a href="https://policies.google.com/terms">
+                  Terms of Service,
+                </a>{" "}
+                and is used for providing, maintaining, and improving the
+                reCAPTCHA service and for general security purposes (it is not
+                used for personalized advertising by Google).
+              </span>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
   return (
     <div className={styles.wholepage}>
       <Navbar />
@@ -24,20 +79,7 @@ const GiftCard = () => {
                 </span>
                 <h1 className={styles.title}>Enter your gift code</h1>
               </div>
-              <div className={styles.codeContainer}>
-                <InputBox />
-                <div className={styles.plan}>
-                  <div className={styles.planType}>
-                    <div className={styles.price}>
-                      <span className={styles.priceSpan}>26.99 TL/month</span>
-                    </div>
-                    <div className={styles.planName}>Basic Plan</div>
-                  </div>
-                  <Link to="/paymentChoice">
-                    <button className={styles.changeBtn}>Change</button>
-                  </Link>
-                </div>
-              </div>
+              {inputField()}
             </div>
 
             <StepButton
@@ -45,44 +87,7 @@ const GiftCard = () => {
               content={"Redeem Gift Code"}
               width={"440px"}
             />
-
-            <div className={styles.termsContainer}>
-              <div className={styles.terms}>
-                <p className={styles.content}>
-                  <span className={styles.contentSpan}>
-                    This page is protected by Google reCAPTCHA to ensure you're
-                    not a bot.{" "}
-                  </span>
-                  <button
-                    className={styles.learnMoreBtn}
-                    onClick={handleClick}
-                    style={
-                      isClicked ? { display: "none" } : { display: "block" }
-                    }
-                  >
-                    Learn More
-                  </button>
-                </p>
-                {isClicked && (
-                  <div className={styles.learnMore}>
-                    <span className={styles.learnMoreContent}>
-                      The information collected by Google reCAPTCHA is subject
-                      to the Google{" "}
-                      <a href="https://policies.google.com/privacy">
-                        Privacy Policy
-                      </a>{" "}
-                      and{" "}
-                      <a href="https://policies.google.com/terms">
-                        Terms of Service,
-                      </a>{" "}
-                      and is used for providing, maintaining, and improving the
-                      reCAPTCHA service and for general security purposes (it is
-                      not used for personalized advertising by Google).
-                    </span>
-                  </div>
-                )}
-              </div>
-            </div>
+            {privacyText()}
           </form>
         </div>
       </div>

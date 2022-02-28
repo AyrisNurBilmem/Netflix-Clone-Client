@@ -1,0 +1,87 @@
+@import "../../../../styles/variable";
+@import "../../../../styles/mixins";
+.middleContainer {
+  padding-bottom: 90px;
+}
+.centerContainer {
+  transition-duration: 250ms;
+  padding: 20px 32px 60px;
+  margin: 0 auto 15px;
+  max-width: 978px;
+  box-sizing: border-box;
+}
+.creditcards {
+  width: 10em;
+}
+.inputContainer {
+  max-width: 440px;
+  margin: 0 auto;
+
+  .stepIndicator {
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0.4em 0;
+  }
+  .plan {
+    @include centerStuff;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin-top: 25px;
+    padding: 0 10px;
+    justify-content: space-between;
+  }
+  .planType {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7px 14px;
+    line-height: 16px;
+    min-height: 72px;
+    box-sizing: border-box;
+    .price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #333;
+      line-height: 16px;
+    }
+    .planName {
+      padding-top: 5px;
+      font-size: 16px;
+      font-weight: 400;
+      color: #737373;
+    }
+  }
+  .changeBtn {
+    font-size: 16px;
+    background-color: inherit;
+    border: 0;
+    margin-left: auto;
+    padding: 14px;
+    flex: 0 0 auto;
+    font-weight: 700;
+    color: #0071eb;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.termsContainer {
+  max-width: 440px;
+  margin: 20px auto 0;
+  font-size: 13px;
+  color: #828282;
+}
+.checkboxDiv {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.agreeTerms {
+  margin-left: 5px;
+  font-size: 16px;
+}

@@ -1,5 +1,6 @@
 @import "../../styles/variable";
 .inputdiv {
+  margin: 10px 0;
   max-width: 428px;
   border-radius: 2px;
   border: solid 1px #757575;
@@ -53,7 +54,7 @@
 
   .inputbox:focus + .inputLabel .labelContent,
   .inputbox:valid + .inputLabel .labelContent {
-    transform: translateY(-110%);
+    transform: translateY(-70%);
     font-size: 14px;
     font-weight: bold;
     left: 0px;
