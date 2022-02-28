@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Navbar from "../../../components/navbar/Navbar";
 import styles from "./secondstep.module.scss";
 import checkmark from "../../../images/Checkmark.png";
+import StepButton from "../../../components/stepbutton/StepButton";
 import Footer from "../../../components/footer/Footer";
 import * as IoIcons from "react-icons/io";
 import { IconContext } from "react-icons/lib";
@@ -55,13 +55,7 @@ const SecondStep = () => {
                 </ul>
               </div>
             </div>
-            <div className={styles.buttonCard}>
-              <Link to="/paymentChoice">
-                <button className={styles.nextbtn} type="submit">
-                  Next
-                </button>
-              </Link>
-            </div>
+            <StepButton link={"/paymentChoice"} content={" Next"} />
           </div>
         </div>
         <div className={styles.footer}>

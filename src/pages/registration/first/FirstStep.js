@@ -1,11 +1,10 @@
-import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import useForm from "../../../error/useForm";
 import validate from "../../../error/validateFormSignUp";
 import Footer from "../../../components/footer/Footer";
 import Navbar from "../../../components/navbar/Navbar";
-import styles from "./firststep.module.scss";
-import { UserContext } from "../../../context/UserContext";
+import StepButton from "../../../components/stepbutton/StepButton";
+import styles from "./first.module.scss";
 
 const FirstStep = () => {
   const { handleChange, values, handleSubmit, errors } = useForm(validate);
@@ -95,13 +94,7 @@ const FirstStep = () => {
                   </div>
                 </div>
               </div>
-              <Link to="/signup">
-                <div className={styles.buttonCard}>
-                  <button className={styles.nextbtn} type="submit">
-                    Next
-                  </button>
-                </div>
-              </Link>
+              <StepButton link={"/signup"} content={" Next"} />
             </form>
           </div>
         </div>

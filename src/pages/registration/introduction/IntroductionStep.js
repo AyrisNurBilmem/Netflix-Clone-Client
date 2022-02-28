@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
 import devices from "../../../images/devices.png";
 import Navbar from "../../../components/navbar/Navbar";
 import styles from "./introduction.module.scss";
 import Footer from "../../../components/footer/Footer";
+import StepButton from "../../../components/stepbutton/StepButton";
 
 const IntroductionStep = () => {
   return (
@@ -30,13 +30,7 @@ const IntroductionStep = () => {
                 any device at any time.
               </div>
             </div>
-            <div className={styles.buttonCard}>
-              <Link to="/signup/regform">
-                <button className={styles.nextbtn} type="submit">
-                  Next
-                </button>
-              </Link>
-            </div>
+            <StepButton link={"/signup/regform"} content={" Next"} />
           </div>
         </div>
         <div className={styles.footer}>

@@ -15,16 +15,7 @@ const Searchbar = () => {
       </h3>
       <div className={styles.searchbarDiv}>
         <div className={styles.searchbar}>
-          <input
-            className={styles.inputbox}
-            type="text"
-            required
-            /* onChange={(event) => {
-              setEmail(event.target.value);
-              console.log(email);
-            }}
-            value={email}*/
-          />
+          <input className={styles.inputbox} type="text" required />
           <label className={styles.inputLabel}>
             <span className={styles.labelContent}>Email address</span>
           </label>
